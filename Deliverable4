@@ -1,0 +1,44 @@
+-  Try a different classification model - RandomForest used in this case.
+   See what happens without any model tuning and submit the result to get my
+   name on the leaderboard with a result better than the default model.
+
+-  Tune RandomForest because it seems to be underfitting the data, the error is
+   higher than I'd like. Almost certainly underfitting because the model hasn't
+   been tuned to fit the data set at all beyond default. Try tuning by
+   implementing different param_grid options. Increase possible estimators
+   to [50, 100, 150] and max depth to [10, 30, 50]. Better score found so submit
+   model to the leaderboard however the model preformed equally on the test data.
+
+-  Try a different model. In this case try and implement a KNearestNeighbors
+   technique because I'm curious as to what will happen.
+   Run the model without tuning and compare with randomforest result. Score is
+   significantly worse, probably underfitting for the same reason RandomForest
+   was underfitting beforehand but there is a lot of performance to make up so it
+   is unlikely the model tuning will reach the goal.
+
+- Implement a naive-bayes technique because it is said to preform well on high
+  dimensional data. Without tuning the score was higher than the randomforest
+  implementation. Model showed promise and some tuning would likely improve
+  the model even further. Unable to submit due to limit
+
+
+QUESTIONS
+
+1) Limit the number of trials per day so that more thought has to go into the
+   model design. If a user can continue tweaking things and see what happens
+   immediately there is much less deliberation over reasons for techniques,
+   technique change and model tuning. Limiting the submission amount to three
+   forces the user to make educated, thoughtful decisions about their model
+   instead of doing something entirely heuristic.
+
+2) It is designed like this so that model overfitting is not rewarded. A user
+   could simply overfit to the public leaderboard test set to win, however
+   realistically this wouldn't be the best solution. Because of this a technique
+   used to win must be more robust and effective on all data, not only the given
+   testing data.
+
+3) I used randomforest and controlled its flexibility using the param_grid input
+   options. In the final implementation the model compared its accuracy with
+   three different variables for depth and estimators. This was not my intended
+   final model so I did not experiment much more thoroughly with the different
+   attributes and parameters of the model.
